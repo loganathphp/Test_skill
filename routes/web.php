@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
+
+Route::get('/','StockController@index')->name('index');
+Route::post('stock/save','StockController@save')->name('store');
